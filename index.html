@@ -1,61 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Liew Chong Sing – Interactive Resume</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LIEW CHONG SING — Interactive CV</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Liew Chong Sing</h1>
-    <p>Certified Scrum Master | AWS Cloud Practitioner | AI Project Leader</p>
+  <header class="site-header">
+    <div class="container">
+      <h1 id="name">LIEW CHONG SING</h1>
+      <p class="tagline">Certified Scrum Master • SAFe 6.0 POPM • AWS Cloud Practitioner</p>
+      <div class="contacts">
+        <a href="mailto:monster76liew@gmail.com" id="email">monster76liew@gmail.com</a>
+        <span>•</span>
+        <a href="tel:+60123150604">+60 12-3150604</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/chong-sing-certified-aws-cloud-practitioner-csm-safe-popm-3b9a2b101/details/certifications/" target="_blank">LinkedIn</a>
+        <button id="copyEmail" class="small-btn">Copy email</button>
+        <a id="downloadPDF" href="Resume%2016Nov2025.pdf" target="_blank" class="cta">Download PDF</a>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#cert">Certifications</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="small-btn">Toggle Theme</button>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Visionary builder of emotionally intelligent systems blending behavioral science, justice tech, and adaptive design.</p>
-  </section>
+  <main class="container">
+    <section id="about">
+      <h2>Profile</h2>
+      <p>Highly accomplished project management and administrative professional with 10+ years of experience leading projects, optimizing processes, and driving results across education and technology. Seeking a leadership role in Customer Success or Onboarding Strategy. (Content taken from your uploaded resume.)</p>
+    </section>
 
-  <section>
-    <section>
-  <h2>Experience</h2>
+    <section id="experience">
+      <h2>Experience</h2>
 
-  <h3>Project Manager – Axrail Sdn. Bhd. (May 2024 – Present)</h3>
-  <ul>
-    <li>Leading AI innovation and digital transformation across Malaysia and Singapore</li>
-    <li>Directed multi-million-dollar RAG implementations for commerce and capital management</li>
-    <li>Developed predictive analytics and enterprise AI search solutions</li>
-    <li>Managed full-cycle ERP & SAP integrations with AWS cloud architecture</li>
-    <li>Delivered projects on-time and within budget through proactive timeline management</li>
-  </ul>
+      <div class="job">
+        <button class="job-toggle">Project Manager (Product & Programme Scope) — Axrail Sdn. Bhd. (15/05/2024 – present)</button>
+        <div class="job-body">
+          <ul>
+            <li>Leading AI Innovation & Digital Transformation. Key achievement: First Malaysia-owned company to obtain AWS Gen-AI Competency.</li>
+            <li>RAG Projects Leadership, Predictive Analytics Development, Enterprise AI Integration.</li>
+            <li>Cloud-first architecture, ERP & SAP integrations, e-commerce platform builds.</li>
+          </ul>
+        </div>
+      </div>
 
-  <h3>Manager, Registrar Office – UCSI University (Sep 2023 – May 2024)</h3>
-  <ul>
-    <li>Managed 15 faculties and 150+ programs across 4 campuses</li>
-    <li>Led cloud migration and optimized student record systems</li>
-    <li>Coordinated graduation ceremonies for 2,000+ attendees</li>
-    <li>Established compliance channels with 110+ countries</li>
-  </ul>
+      <div class="job">
+        <button class="job-toggle">Manager, Registrar Office — UCSI University (09/2023 – 05/2024)</button>
+        <div class="job-body">
+          <ul>
+            <li>Managed 15 faculties, 150+ programs across 4 campuses (10,000+ students). Led cloud migration in 2023.</li>
+            <li>Coordinated biannual graduation ceremonies for 2,000+ attendees. Managed reporting portals and international compliance.</li>
+          </ul>
+        </div>
+      </div>
 
-  <h3>Assistant Manager, Faculty of Business – UCSI University (Dec 2014 – Aug 2023)</h3>
-  <ul>
-    <li>Led 12 academic accreditation projects with 100% success rate</li>
-    <li>Oversaw 6 departments and 40+ programs across 4 campuses</li>
-    <li>Implemented digital transformation and workflow optimization</li>
-    <li>Managed data for MyRA, SETARA, and QS rankings</li>
-  </ul>
-</section>
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/monster76liew/Emution-landing-page">Emution – Mood Analytics</a></li>
-      <li><a href="https://github.com/monster76liew/mentorship-tracker">Mentorship Tracker</a></li>
-    </ul>
-  </section>
+      <div class="job">
+        <button class="job-toggle">Assistant Manager, Faculty of Business and Management — UCSI University (12/2014 – 08/2023)</button>
+        <div class="job-body">
+          <ul>
+            <li>Managed multiple accreditation projects, led digital transformation, and drove administrative optimizations.</li>
+            <li>Led team of 76, coached, and improved delivery timelines.</li>
+          </ul>
+        </div>
+      </div>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: monster76liew@gmail.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/liewchongsing">linkedin.com/in/liewchongsing</a></p>
-  </section>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>Master of Science in Psychology | Liverpool John Moores University, UK — Completed 2025.</li>
+        <li>BA (Hons) Music | Middlesex University, UK — Completed 1999 (Convocation 2000).</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills & Tools</h2>
+      <div class="chips">
+        <span>Project Management</span>
+        <span>Agile / Scrum</span>
+        <span>AWS</span>
+        <span>Jira</span>
+        <span>Data Analysis</span>
+        <span>RAG / Gen-AI Projects</span>
+      </div>
+    </section>
+
+    <section id="cert">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Certified SAFe 6.0 Product Owner/Product Manager (April 2025)</li>
+        <li>Certified Scrum Master (August 2024)</li>
+        <li>AWS Certified Cloud Practitioner (January 2024)</li>
+        <!-- More items can be added -->
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Location: Cheras, Kuala Lumpur, Malaysia</p>
+      <p>Email: <a href="mailto:monster76liew@gmail.com">monster76liew@gmail.com</a> — <button id="copyEmail2" class="small-btn">Copy</button></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Interactive CV — Generated for: LIEW CHONG SING. Resume source: uploaded PDF. :contentReference[oaicite:2]{index=2}</small>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
