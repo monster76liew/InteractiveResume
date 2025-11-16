@@ -1,30 +1,78 @@
+/* Reset & base */
 :root{
-  --bg:#f7f7f9;
-  --card:#fff;
-  --text:#111;
-  --muted:#555;
-  --accent:#0b76ef;
+  --bg: #0f1724;         /* dark background */
+  --card: #0b1220;
+  --text: #e6eef8;
+  --muted: #9fb0c8;
+  --accent1: #7c3aed;    /* purple */
+  --accent2: #06b6d4;    /* teal */
+  --glass: rgba(255,255,255,0.03);
+  --glass-2: rgba(255,255,255,0.02);
 }
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;padding:0;margin:0;background:var(--bg);color:var(--text);line-height:1.5}
-.container{max-width:900px;margin:0 auto;padding:20px}
-.site-header{background:var(--card);box-shadow:0 2px 6px rgba(0,0,0,0.06);position:sticky;top:0;z-index:3;padding:18px}
-.site-header h1{margin:0;font-size:22px}
-.tagline{margin:6px 0;color:var(--muted)}
-.contacts{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
-a{color:var(--accent);text-decoration:none}
-.nav{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
-.nav a{padding:6px 10px;border-radius:6px;background:#f0f4ff}
-.cta{background:var(--accent);color:white;padding:6px 10px;border-radius:6px}
-.small-btn{padding:6px 8px;border-radius:6px;border:1px solid rgba(0,0,0,0.06);background:white;cursor:pointer}
-main{padding:20px 0}
-section{margin-bottom:22px;padding:18px;border-radius:10px;background:var(--card);box-shadow:0 1px 4px rgba(0,0,0,0.04)}
-h2{margin-top:0}
-.job{margin-bottom:10px}
-.job-toggle{width:100%;text-align:left;padding:12px;border-radius:8px;background:#fff;border:1px solid #eee;cursor:pointer;font-weight:600}
-.job-body{display:none;padding:10px 12px;border-left:4px solid var(--accent);margin-top:8px;background:#fbfbff}
-.chips span{display:inline-block;margin:6px 8px;padding:6px 10px;border-radius:16px;background:#f3f6ff}
-.site-footer{padding:16px;text-align:center;color:var(--muted)}
-/* Dark theme */
-.dark{background:#0b0d10;color:#e9eef6}
-.dark .site-header{background:#0f1215}
-.dark section{background:#0b0d10}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;background:var(--bg);color:var(--text)}
+#app{display:flex;min-height:100vh}
+
+/* Sidebar */
+.sidebar{
+  width:300px;padding:28px;background:linear-gradient(180deg,var(--card),#06101b 140%);border-right:1px solid rgba(255,255,255,0.02);position:sticky;top:0;height:100vh;overflow:auto}
+.profile{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.avatar{width:84px;height:84px;border-radius:14px;overflow:hidden}
+#fullname{font-size:20px;margin:0}
+.role{color:var(--muted);font-size:13px;margin:0}
+.contact{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.link{color:var(--text);text-decoration:none;font-size:13px}
+.copy{background:transparent;border:1px solid rgba(255,255,255,0.05);color:var(--muted);padding:6px;border-radius:8px;cursor:pointer}
+.download .btn{display:inline-block;margin-top:8px;background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:8px 12px;border-radius:10px;color:white;text-decoration:none;font-weight:600}
+.theme-switch{margin-top:10px;color:var(--muted);font-size:13px}
+
+/* Navigation */
+.nav{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.nav-btn{background:transparent;border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;color:var(--muted);text-align:left;cursor:pointer}
+.nav-btn:hover{background:var(--glass-2);color:var(--text)}
+
+/* Main content */
+.content{flex:1;padding:28px;overflow:auto}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;margin-bottom:18px;border:1px solid rgba(255,255,255,0.02)}
+.card h2{margin:0 0 10px 0}
+.lead{color:var(--muted);margin:0 0 4px 0}
+
+/* Jobs */
+.job{margin-bottom:12px}
+.job-head{display:flex;align-items:center;justify-content:space-between}
+.job-head h3{margin:0}
+.muted{color:var(--muted);font-size:13px;margin:6px 0 0 0}
+.job-body{padding:12px 2px 2px 2px;display:none}
+.job-body ul{margin:0;padding-left:18px;color:var(--muted)}
+
+/* Skills */
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.skill{background:rgba(255,255,255,0.01);padding:12px;border-radius:8px}
+.skill h4{margin:0 0 8px 0}
+.bar{height:12px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
+.fill{height:100%;width:0%;background:linear-gradient(90deg,var(--accent1),var(--accent2));border-radius:999px;transition:width 900ms cubic-bezier(.2,.9,.2,1)}
+
+/* chips */
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:6px 0}
+.chips li{list-style:none;background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:999px;color:var(--muted)}
+
+/* footer */
+.footer{text-align:center;color:var(--muted);padding:12px 0}
+
+/* small screens */
+@media (max-width:880px){
+  #app{flex-direction:column}
+  .sidebar{width:100%;height:auto;border-right:none;border-bottom:1px solid rgba(255,255,255,0.02)}
+  .content{padding:16px}
+}
+
+/* Light theme override */
+:root.light{
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --text:#0b1220;
+  --muted:#3b556b;
+  --glass: rgba(11,18,32,0.02);
+  --glass-2: rgba(11,18,32,0.01);
+}
