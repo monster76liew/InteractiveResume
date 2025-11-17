@@ -1,0 +1,23 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --text: #e6eef8;
+  --muted: #9fb0c8;
+  --accent1: #7c3aed;
+  --accent2: #06b6d4;
+  --glass: rgba(255,255,255,0.03);
+  --glass-2: rgba(255,255,255,0.02);
+}
+:root.light {
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --text: #0b1220;
+  --muted: #3b556b;
+  --glass: rgba(11,18,32,0.02);
+  --glass-2: rgba(11,18,32,0.01);
+}
+html {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
