@@ -4,9 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Liew Chong Sing — Interactive Resume</title>
+  <meta name="description" content="Interactive resume — Liew Chong Sing. Project Manager | Product & Programme Lead (AI & Digital Transformation)"/>
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <meta name="description" content="Interactive resume — Liew Chong Sing. Project Manager | Product & Programme Lead 
-(AI & Digital Transformation)"/>
+  
+  <!-- Modular CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/theme.css">
 </head>
 <body>
   <div id="app">
@@ -30,6 +37,13 @@
           <button class="copy" data-copy="monster76liew@gmail.com" title="Copy email">Copy</button>
           <a href="tel:+60123150604" class="link">+60 12-3150604</a>
         </div>
+        <div class="theme-toggle">
+  <label for="dark-mode-toggle">
+    <input type="checkbox" id="dark-mode-toggle" checked>
+    Dark mode
+  </label>
+</div>
+
 
         <div class="download">
           <a href="Resume%2016Nov2025.pdf" class="btn" target="_blank" rel="noopener">Download PDF</a>
@@ -293,6 +307,6 @@
 
   </div>
 
-  <script src="script.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
